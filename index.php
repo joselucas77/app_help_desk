@@ -18,7 +18,7 @@
 
     <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#">
-        <img src="logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        <img src="imagens/logo.png" width="30" height="30" class="d-inline-block align-top" alt="">
         App Help Desk
       </a>
     </nav>
@@ -32,13 +32,23 @@
               Login
             </div>
             <div class="card-body">
-              <form>
+              <form action="valida_login.php" method="post">
                 <div class="form-group">
-                  <input type="email" class="form-control" placeholder="E-mail">
+                  <input type="email" class="form-control" placeholder="E-mail" name="email">
                 </div>
                 <div class="form-group">
-                  <input type="password" class="form-control" placeholder="Senha">
+                  <input type="password" class="form-control" placeholder="Senha"
+                  name="senha">
                 </div>
+
+                <? if(isset($_GET['login']) && $_GET['login'] == 'erro') { ?>
+
+                <div class="text-danger">
+                  Usuário ou senha inválida(s)
+                </div>
+
+                <? } ?>
+
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
               </form>
             </div>
