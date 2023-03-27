@@ -19,7 +19,7 @@
     //controle de visualização dos chamados(adm != user)
     if($_SESSION['perfil_id'] == 2) {
       //só vamos exibir o chamado, se ele foi criado pelo usuário
-      if($_SESSION['id'] != $chamado_dados[0]) {
+      if($_SESSION['id'] != $registro_detalhes[0]) {
         continue;
       } else {
         $chamados[] = $registro;
