@@ -40,6 +40,8 @@
     <meta charset="utf-8" />
     <title>App Help Desk</title>
 
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
     <style>
@@ -90,6 +92,7 @@
                     <h5 class="card-title"><?=$chamado_dados[1]?></h5>
                     <h6 class="card-subtitle mb-2 text-muted"><?=$chamado_dados[2]?></h6>
                     <p class="card-text"><?=$chamado_dados[3]?></p>
+                    <a href="deletar_chamado.php" class="btn btn-danger"><i class="fas fa-times"></i></a>
 
                   </div>
                 </div>
